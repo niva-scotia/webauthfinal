@@ -1,0 +1,250 @@
+
+    :root {
+        --bg:          #EAE0D5;
+        --border:      #c9c4bb;
+        --label-color: #7a756c;
+        --accent:      #d45f3c;
+   
+        --block-title-bg:   #221f1b;
+        --block-logo-bg:    #1E1E1E;
+        --block-header-bg:  #5e503f;
+        --block-group-bg:   #2F2B24;
+        --block-image-bg:   #22333B;
+        --block-content-bg: #EAE0D5;
+        --block-intro-bg:   #D6C3AE; 
+   
+        --font-mono: 'Courier New', Courier, monospace;
+      }
+   
+      /* ─── RESET ──────────────────────────────────────────── */
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html, body { height: 100%; }
+   
+      body {
+        background: var(--bg);
+        font-family: var(--font-mono);
+        font-size: 12px;
+      }
+   
+      /* ─── PAGE GRID ──────────────────────────────────────── */
+      /*
+        4-column base so every row resolves cleanly:
+          row 1 → title(1col) | logo(2col) | title(1col)
+          row 2 → header spans all 4
+          row 3 → four equal group cards
+          rows 4-7 → image(2col) + content(2col), alternating
+      */
+      .page {
+        display: grid;
+        min-height: 100vh;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows:
+          150px          /* title / logo */
+          75px
+          120px         /* header */
+          300px         /* groups nav */
+          420px
+          600px         /* section 1 */
+          600px         /* section 2 */
+          600px         /* section 3 */
+          100px;        /* section 4 */
+        grid-template-areas:
+          "logo     logo     logo     "
+          "nav      nav      nav      "
+          "header   header   header   "
+          "group1   group2   group3   "
+          "intro    intro    intro    "
+          "img1     img1     content1 "
+          "content2 img2     img2     "
+          "img3     img3     content3 "
+          "footer   footer   footer   ";
+        border: 0px solid var(--border);
+      }
+   
+      /* ─── SHARED BLOCK BASE ──────────────────────────────── */
+      .block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        position: relative;
+        overflow: hidden;
+      }
+   
+      /* area label */
+      .block .area-name {
+        font-size: 10px;
+        letter-spacing: .14em;
+        text-transform: uppercase;
+        opacity: .55;
+      }
+   
+      /* big label */
+      .block .type-label {
+        font-size: 13px;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+
+   /* ─── NAV BAR ────────────────────────────────────────── */
+    .nav-bar {
+      background: var(--block-title-bg);
+      color: #e8e3dc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 28px;
+      height: 70px;
+      border-bottom: 2px;
+      font-family: var(--font-mono);
+      font-size: 18px;
+      letter-spacing: .10em;
+      text-transform: uppercase;
+    }
+    .nav-bar .nav-links {
+      display: flex;
+      width: 100%;
+      justify-content: space-evenly; 
+    }
+    .nav-bar .nav-link {
+      color: #a09890;
+      text-decoration: none;
+      transition: color .15s;
+    }
+    .nav-bar .nav-link:hover { color: var(--accent); }
+
+ 
+      /* ─── DARK BLOCKS (title / logo / header / groups) ───── */
+      .block-dark {
+        background: var(--block-title-bg);
+        color: #e8e3dc;
+      }
+      .block-dark .area-name { color: #a09890; }
+   
+      /* ─── LOGO (centered icon placeholder) ──────────────── */
+      .block-logo {
+        background: var(--block-logo-bg);
+        color: #e8e3dc;
+      }
+      .block-logo a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+      }
+      .logo-img{
+        width: 12%;
+        height: auto;
+      }
+   
+      /* ─── HEADER ─────────────────────────────────────────── */
+      .block-header {
+        background: var(--block-header-bg);
+        color: #e8e3dc;
+        border-bottom: 3px solid var(--accent);
+      }
+      .header-rule {
+        width: 40px; height: 2px;
+        background: var(--accent);
+        border-radius: 1px;
+      }
+   
+      /* ─── GROUP CARDS ────────────────────────────────────── */
+      .block-group {
+        background: var(--block-group-bg);
+        color: #d0cbc4;
+        cursor: pointer;
+        transition: background .2s;
+      }
+      .block-group:hover { background: #504b47; }
+      .group-num {
+        font-size: 28px;
+        line-height: 1;
+        color: var(--accent);
+        opacity: .7;
+      }
+      .group-container {
+        position: relative;
+        text-align: center;
+      }
+      .group-container img{
+        width: 100%;
+        height: 100%;
+        min-height: 0;   
+        min-width: 0;   
+        object-fit: cover;
+        display: block; 
+        opacity: 20%;
+      }
+      .centered {
+        position: absolute;
+        font-size: 20px;
+        line-height: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .block-intro {
+        background-color: var(--block-intro-bg);
+        align-items: center;
+        justify-content: flex-start;
+        padding: 15px 20px;
+        gap: 5px;  
+      }
+      .block-intro h2 {
+        font-size: 30px;
+        color: #285366;
+      }
+    
+      
+      /* ─── IMAGE BLOCKS ───────────────────────────────────── */
+      .block-image {
+        background: var(--block-image-bg);
+        border: 4px solid var(--block-image-bg);
+        box-shadow: 2px #1E1E1E;
+      }
+      .img-grid {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 4px;
+      }
+      
+      .img-grid img {
+        width: 100%;
+        height: 100%;
+        min-height: 0;   
+        min-width: 0;   
+        object-fit: cover;
+        opacity: 60%;
+        display: block;  
+      }
+   
+      /* ─── CONTENT BLOCKS ─────────────────────────────────── */
+      .block-content {
+        background: var(--block-content-bg);
+        color: #3a3632;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 5px 20px;
+        gap: 14px;
+        border-top: 3px solid var(--block-content-bg) ;
+
+      }
+      .block-content h3 {
+        font-size: 24px;
+        color: #285366;
+        margin-bottom: auto; 
+      }
+
+     
+   
+
+
+   
