@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Images</title>
+</head>
+<body>
+    
+ 
+<div class="page">
+ 
+  <!-- ── ROW 1: title | logo | title ───────────────────── -->
+ 
+  <div class="block block-logo" style="grid-area: logo" data-area="logo">
+    <a href="index.html"><img src="imgs/Untitled.svg" alt="Logo" class="logo-img"/></a>
+  </div>
+   
+  <!-- ── ROW 2: nav bar ────────────────────────────────── -->
+  <nav class="nav-bar" style="grid-area: nav;">
+    <div class="nav-links">
+      <a class="nav-link" href="#">About</a>
+      <a class="nav-link" href="#">Feature</a>
+      <a class="nav-link" href="#">Map</a>
+      <a class="nav-link" href="#">Reviews</a>
+      <a class="nav-link" href="#">Image Gallery</a>
+    </div>
+  </nav>
+ 
+  <!-- ── ROW 2: header ─────────────────────────────────── -->
+  <div class="block block-header" style="grid-area: header">
+    <div class="header-rule"></div>
+    <span class="type-label" style="font-size:25px; opacity:.7;">Image Gallery</span>
+    <span class="area-name">Capturing moments, movements, and more!</span>
+  </div>
+ 
+  <!-- ── ROW 3: group nav thumbnails ───────────────────── -->
+  <div class="block block-group" style="grid-area: group1" >
+    <a href="#group1">
+    <div class="group-container">
+    <img src="imgs/group1-bg.jpg" alt="Group 1 Background Image"> 
+    <div class="centered" style="transform: translate(-50%, -150%);"><span class="group-num">01</span></div>
+    <div class="centered">Phases of a Climb</div>
+    </div>
+    </a>
+  </div>
+
+  <div class="block block-group" style="grid-area: group2">
+    <div class="group-container">
+    <img src="imgs/group1-bg.jpg" alt="Group 1 Background Image"> 
+    <div class="centered" style="transform: translate(-50%, -150%);"><span class="group-num">02</span></div>
+    <div class="centered">Climbing Equipment</div>
+    </div>
+  </div>
+
+  <div class="block block-group" style="grid-area: group3">
+    <div class="group-container">
+    <img src="imgs/group1-bg.jpg" alt="Group 1 Background Image"> 
+    <div class="centered" style="transform: translate(-50%, -150%);"><span class="group-num">03</span></div>
+    <div class="centered">Climbing Holds</div>
+    </div>
+  </div>
+
+  <div class="block block-intro" style="grid-area: intro">
+    
+    <h2>Introduction</h2>
+    <div class="header-rule"></div>
+    <p>
+        lorem ipsum 
+    </p>
+
+  </div>
+  
+  <!-- ── ROW 4: Section 1 — image | content ────────────── -->
+  <div id="group1" class="block block-image" style="grid-area: img1">
+    <div class="img-grid">
+        <img src="imgs/group1-1.jpg" alt="reading/starting a climb"/>
+        <img src="imgs/group1-2.jpg" alt="during climb"/>
+        <img src="imgs/group1-3.jpg" alt="finishing climb"/>
+        <img src="imgs/group1-4.jpg" alt="after a climb"/>
+      </div>
+  </div>
+ 
+  <div class="block block-content" style="grid-area: content1">
+    <h3>The Phases of a Climb</h3>
+    <p> 
+
+    </p>
+  </div>
+ 
+  <!-- ── ROW 5: Section 2 — content | image ────────────── -->
+  <div class="block block-content" style="grid-area: content2">
+    <div class="skel-tag"></div>
+    <div class="skel-rule"></div>
+    <div class="skel-h2 w-4-5"></div>
+    <div class="skel-line w-full"></div>
+    <div class="skel-line w-4-5"></div>
+    <div class="skel-line w-9-10"></div>
+    <div class="skel-line w-full"></div>
+    <div class="skel-line w-3-4"></div>
+    <div class="skel-btn"></div>
+  </div>
+ 
+  <div class="block block-image" style="grid-area: img2" data-area="image">
+    <div class="img-placeholder">
+      <svg width="32" height="24" viewBox="0 0 32 24" fill="none">
+        <polyline points="0,24 8,12 14,18 20,6 32,24" fill="rgba(255,255,255,.18)" stroke="rgba(255,255,255,.35)" stroke-width="1"/>
+        <circle cx="25" cy="8" r="3" fill="rgba(255,255,255,.25)"/>
+      </svg>
+    </div>
+    <span class="type-label" style="font-size:10px; opacity:.5;">Image Block</span>
+    <div class="img-caption-strip">
+      <div class="caption-line" style="width:70px;"></div>
+      <div class="caption-line" style="width:100px;"></div>
+    </div>
+  </div>
+ 
+  <!-- ── ROW 6: Section 3 — image | content ────────────── -->
+  <div class="block block-image" style="grid-area: img3" data-area="image">
+    <div class="img-placeholder">
+      <svg width="32" height="24" viewBox="0 0 32 24" fill="none">
+        <polyline points="0,24 6,14 12,20 20,4 32,24" fill="rgba(255,255,255,.18)" stroke="rgba(255,255,255,.35)" stroke-width="1"/>
+        <circle cx="5" cy="5" r="3" fill="rgba(255,255,255,.25)"/>
+      </svg>
+    </div>
+    <span class="type-label" style="font-size:10px; opacity:.5;">Image Block</span>
+    <div class="img-caption-strip">
+      <div class="caption-line" style="width:110px;"></div>
+      <div class="caption-line" style="width:40px;"></div>
+    </div>
+  </div>
+ 
+  <div class="block block-content" style="grid-area: content3" data-area="content">
+    <div class="skel-tag"></div>
+    <div class="skel-rule"></div>
+    <div class="skel-h2 w-2-3"></div>
+    <div class="skel-line w-9-10"></div>
+    <div class="skel-line w-full"></div>
+    <div class="skel-line w-4-5"></div>
+    <div class="skel-line w-full"></div>
+    <div class="skel-line w-3-4"></div>
+    <div class="skel-btn"></div>
+  </div>
+
+ 
+</div><!-- /page -->
+ 
+</body>
+
+
+</html>
