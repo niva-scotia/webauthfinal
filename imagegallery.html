@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Images</title>
 </head>
 
@@ -55,7 +56,7 @@
         <div class="block block-group" style="grid-area: group3">
             <a href="#group3">
                 <div class="group-container">
-                    <img src="imgs/group3-3.jpg" alt="Group 3 Background Image">
+                    <img src="imgs/group3-3.jpg" alt="Group 3 Background Image" style="opacity: 40%;";>
                     <div class="centered" style="transform: translate(-50%, -150%);"><span class="group-num">03</span>
                     </div>
                     <div class="centered">Climbing Equipment</div>
@@ -91,10 +92,22 @@
 
         <div id="group1" class="block block-image" style="grid-area: img1">
             <div class="img-grid">
+                <div class="img-wrap">
                 <img src="imgs/group1-1.jpg" alt="reading/starting a climb" />
+                <div class="img-caption">Reading the route</div>
+                </div>
+                <div class="img-wrap">
                 <img src="imgs/group1-2.jpg" alt="during climb" />
+                <div class="img-caption">Dynamic climbing movement</div>
+                </div>
+                <div class="img-wrap">
                 <img src="imgs/group1-3.jpg" alt="finishing climb" />
+                <div class="img-caption">Topping the climb</div>
+                </div>
+                <div class="img-wrap">
                 <img src="imgs/group1-4.jpg" alt="after a climb" />
+                <div class="img-caption">After falling off the climb</div>
+                </div>
             </div>
         </div>
 
@@ -127,9 +140,89 @@
             <p>
                 The last image on the bottom right is the where you will be most of the time while climbing, on the
                 floor. 90% of climbing is falling. Falling, and trying again, and falling again, and after a few cycles
-                of that, you might complete the climb—maybe. The falling is just as important as the climbing, because
+                of that, you might complete the climb——maybe. The falling is just as important as the climbing, because
                 it teaches you to get up again.
             </p>
+        </div>
+
+        <div class="block block-data" style="grid-area: data1"> 
+            <div class="chart-title"> <h2> Mental Vs. Physical Exertion by Phase</h2> 
+                <div class="header-rule"></div>
+             </div>
+             <div class="holdbar">
+             <div class="data-section"> 
+                <div class="phase-chart">
+                    <div class="phase-row">
+                        <span class="phase-label">Reading</span>
+                        <div class="bar-group">
+                            <div class="bar-wrap">
+                                <span class="bar-tag mental">Mental</span>
+                                <div class="bar-track"><div class="bar bar-mental" style="--w:100%"></div></div>
+                                <span class="bar-val">100%</span>
+                            </div>
+                            <div class="bar-wrap">
+                                <span class="bar-tag physical">Physical</span>
+                                <div class="bar-track"><div class="bar bar-physical" style="--w:0%"></div></div>
+                                <span class="bar-val">0%</span>
+                            </div>
+                        </div>
+                    </div>
+ 
+                    <div class="phase-row">
+                        <span class="phase-label">Climbing</span>
+                        <div class="bar-group">
+                            <div class="bar-wrap">
+                                <span class="bar-tag mental">Mental</span>
+                                <div class="bar-track"><div class="bar bar-mental" style="--w:40%"></div></div>
+                                <span class="bar-val">40%</span>
+                            </div>
+                            <div class="bar-wrap">
+                                <span class="bar-tag physical">Physical</span>
+                                <div class="bar-track"><div class="bar bar-physical" style="--w:100%"></div></div>
+                                <span class="bar-val">100%</span>
+                            </div>
+                        </div>
+                    </div>
+ 
+                    <div class="phase-row">
+                        <span class="phase-label">Topping Out</span>
+                        <div class="bar-group">
+                            <div class="bar-wrap">
+                                <span class="bar-tag mental">Mental</span>
+                                <div class="bar-track"><div class="bar bar-mental" style="--w:70%"></div></div>
+                                <span class="bar-val">70%</span>
+                            </div>
+                            <div class="bar-wrap">
+                                <span class="bar-tag physical">Physical</span>
+                                <div class="bar-track"><div class="bar bar-physical" style="--w:90%"></div></div>
+                                <span class="bar-val">90%</span>
+                            </div>
+                        </div>
+                    </div>
+ 
+                    <div class="phase-row">
+                        <span class="phase-label">Falling</span>
+                        <div class="bar-group">
+                            <div class="bar-wrap">
+                                <span class="bar-tag mental">Mental</span>
+                                <div class="bar-track"><div class="bar bar-mental" style="--w:70%"></div></div>
+                                <span class="bar-val">70%</span>
+                            </div>
+                            <div class="bar-wrap">
+                                <span class="bar-tag physical">Physical</span>
+                                <div class="bar-track"><div class="bar bar-physical" style="--w:30%"></div></div>
+                                <span class="bar-val">30%</span>
+                            </div>
+                        </div>
+                    </div>
+ 
+                </div>
+                <div class="chart-legend">
+                    <span class="legend-dot mental-dot"></span><span>Mental</span>
+                    <span class="legend-dot physical-dot"></span><span>Physical</span>
+                </div>
+            </div>
+            </div>
         </div>
 
         <div id="group2" class="block block-content" style="grid-area: content2">
@@ -177,19 +270,132 @@
 
         <div class="block block-image" style="grid-area: img2">
             <div class="img-grid">
-                <img src="imgs/group2-1.jpg" alt="crimps" />
-                <img src="imgs/group2-2.jpg" alt="jugs" />
-                <img src="imgs/group2-3.jpg" alt="sloper" />
-                <img src="imgs/group2-4.jpg" alt="pinch" />
+                <div class="img-wrap">
+                    <img src="imgs/group2-1.jpg" alt="crimps" />
+                    <div class = "img-caption">Crimps</div>
+                </div>
+                <div class="img-wrap">
+                    <img src="imgs/group2-2.jpg" alt="jugs" />
+                    <div class = "img-caption">Jugs</div>
+                </div>
+                <div class="img-wrap">
+                    <img src="imgs/group2-3.jpg" alt="sloper" />
+                    <div class = "img-caption">Sloper</div>
+                </div>
+                <div class="img-wrap">
+                    <img src="imgs/group2-4.jpg" alt="pinch" />
+                    <div class = "img-caption">Pinch</div>
+                </div>
             </div>
+        </div>
+
+        <div class="block block-data" style="grid-area: data2"> 
+            <div class="chart-title"> <h2>Hold Personality Profile</h2> 
+                <div class="header-rule"></div>
+             </div>
+             <div class="data-section holdtable"> 
+                <div class = "table-cards">
+                    <div class = "card-title">Crimps</div>
+                    <div class = "card-content">
+                       <div class="card-desc"> Seems judgemental or sarcastic, but has a hidden kindness. Will help you grow as person.</div> 
+                       <table>
+                        <tr>
+                        <td>Archtype:</td>
+                        <td>Rouge With a Heart of Gold</td>
+                        </tr>
+                        <tr>
+                        <td>Music Taste:</td>
+                        <td>Punk Rock </td>
+                        </tr>
+                        <tr>
+                        <td>Currently Listening:</td>
+                        <td>My Own Worst Enemy - Lit</td>
+                        </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class = "table-cards">
+                    <div class = "card-title">Jugs</div>
+                    <div class = "card-content">
+                        <div class="card-desc">Super friendly, but is a people pleaser. Reliable and loyal.</div> 
+                       <table>
+                        <tr>
+                        <td>Archtype:</td>
+                        <td>The Loyal Ally </td>
+                        </tr>
+                        <tr>
+                        <td>Music Taste:</td>
+                        <td>Mainstream Pop</td>
+                        </tr>
+                        <tr>
+                        <td>Currently Listening:</td>
+                        <td>Pocketful of Sunshine - Natasha Bedingfield </td>
+                        </tr>
+                        </table>
+                    </div>
+
+                </div>
+                <div class = "table-cards">
+                    <div class = "card-title">Slopers</div>
+                    <div class = "card-content">
+                        <div class="card-desc">Performative and two-faced. Sometimes looks like a Jug but unreliable when you really need them. Yet can be a reluctant ally if you understand them.</div> 
+                        <table>
+                         <tr>
+                         <td>Archtype:</td>
+                         <td>The Wild Card</td>
+                         </tr>
+                         <tr>
+                         <td>Music Taste:</td>
+                         <td>Indie-Pop </td>
+                         </tr>
+                         <tr>
+                         <td>Currently Listening:</td>
+                         <td>the perfect pair - beabadoobee</td>
+                         </tr>
+                         </table>
+                    </div>
+                </div>
+                <div class = "table-cards">
+                    <div class = "card-title">Pinch</div>
+                    <div class = "card-content">
+                        <div class="card-desc">Humorous and intellegent. Friendly to everyone, but slow to open up.</div> 
+                        <table>
+                         <tr>
+                         <td>Archtype:</td>
+                         <td>The Enigmatic Jester </td>
+                         </tr>
+                         <tr>
+                         <td>Music Taste:</td>
+                         <td>Alternative Rock</td>
+                         </tr>
+                         <tr>
+                         <td>Currently Listening:</td>
+                         <td>Brianstorm - Arctic Monkeys</td>
+                         </tr>
+                         </table>
+                    </div>
+                </div>
+             </div>
         </div>
 
         <div id="group3" class="block block-image" style="grid-area: img3">
             <div class="img-grid">
-                <img src="imgs/group3-1.jpg" alt="reading/starting a climb" />
-                <img src="imgs/group3-2.jpg" alt="during climb" />
-                <img src="imgs/group3-3.jpg" alt="finishing climb" />
-                <img src="imgs/group3-4.jpg" alt="after a climb" />
+                <div class="img-wrap">
+                <img src="imgs/group3-1.jpg" alt="Moderate Climbing Shoes - 5.10 Kirigami" />
+                <div class = "img-caption">Moderate Climbing Shoes - 5.10 Kirigami</div>
+                </div>
+                <div class="img-wrap">
+                <img src="imgs/group3-2.jpg" alt="Chalk Sock" />
+                <div class = "img-caption">Chalk Sock</div>
+                </div>
+                <div class="img-wrap">
+                <img src="imgs/group3-3.jpg" alt="Agressive Climbing Shoes -- La Sportiva Solution Comps" />
+                <div class = "img-caption">Agressive Climbing Shoes -- La Sportiva Solution Comps</div>
+                </div>
+                <div class="img-wrap">
+                <img src="imgs/group3-4.jpg" alt="Pineapple Chalk Bag" />
+                <div class = "img-caption">Pineapple Chalk Bag</div>
+                </div>
             </div>
         </div>
 
@@ -220,9 +426,70 @@
                 have by loose chalk stored in a chalk sock, and the chalk sock goes inside the chalk bag. The sock just
                 adds extra containment, it will get the chalk out a little but at the time, but will still keep it
                 contained if I accidentally turn by chalk bag upside down. This is helpful on overhangs or bathangs
-                where you have to turn your whole body upside down—you don’t want your chalk falling everywhere.
+                where you have to turn your whole body upside down——you don’t want your chalk falling everywhere.
             </p>
         </div>
+
+        <div class="block block-data" style="grid-area: data3"> 
+            <div class="chart-title">
+                <h2>Gear Comparison</h2> 
+                <div class="header-rule"></div>
+            </div>
+            <div class="holdbar">
+            <div class="gear-compare">
+                <table class="gear-table">
+                    <thead>
+                        <tr>
+                            <th class="gear-attr"></th>
+                            <th class="gear-col-head">Beginner Shoes</th>
+                            <th class="gear-col-head accent-col">Advanced Shoes</th>
+                            <th class="gear-col-head">Chalk Sock</th>
+                            <th class="gear-col-head accent-col">Chalk Bag</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="gear-attr">Necessity</td>
+                            <td class="gear-cell"><div class="dot-scale"><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i></div></td>
+                            <td class="gear-cell accent-col"><div class="dot-scale"><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-regular fa-circle"></i></div></td>
+                            <td class="gear-cell"><div class="dot-scale"><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-regular fa-circle"></i><i class="fa-regular fa-circle"></i></div></td>
+                            <td class="gear-cell accent-col"><div class="dot-scale"><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-regular fa-circle"></i><i class="fa-regular fa-circle"></i></div></td>
+                        </tr>
+                        <tr>
+                            <td class="gear-attr">Comfort</td>
+                            <td class="gear-cell"><div class="dot-scale"><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-regular fa-circle"></i></div></td>
+                            <td class="gear-cell accent-col"><div class="dot-scale"><i class="fa-solid fa-circle"></i><i class="fa-regular fa-circle"></i><i class="fa-regular fa-circle"></i><i class="fa-regular fa-circle"></i><i class="fa-regular fa-circle"></i></div></td>
+                            <td class="gear-cell"><div class="dot-scale"><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i></div></td>
+                            <td class="gear-cell accent-col"><div class="dot-scale"><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-regular fa-circle"></i></div></td>
+                        </tr>
+                        <tr>
+                            <td class="gear-attr">Performance</td>
+                            <td class="gear-cell"><div class="dot-scale"><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-regular fa-circle"></i><i class="fa-regular fa-circle"></i></div></td>
+                            <td class="gear-cell accent-col"><div class="dot-scale"><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i></div></td>
+                            <td class="gear-cell"><div class="dot-scale"><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-regular fa-circle"></i></div></td>
+                            <td class="gear-cell accent-col"><div class="dot-scale"><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i></div></td>
+                        </tr>
+                        <tr>
+                            <td class="gear-attr">Price</td>
+                            <td class="gear-cell"><span class="gear-text">$90</span></td>
+                            <td class="gear-cell accent-col"><span class="gear-text">$230</span></td>
+                            <td class="gear-cell"><span class="gear-text">~$5</span></td>
+                            <td class="gear-cell accent-col"><span class="gear-text">~$35</span></td>
+                        </tr>
+                        <tr>
+                            <td class="gear-attr">Best For</td>
+                            <td class="gear-cell"><span class="gear-text">V0–V4</span></td>
+                            <td class="gear-cell accent-col"><span class="gear-text">V5+</span></td>
+                            <td class="gear-cell"><span class="gear-text">Any Level - definitely recommended for indoor gyms</span></td>
+                            <td class="gear-cell accent-col"><span class="gear-text">Any Level</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+        
+
 
     </div>
 </body>
