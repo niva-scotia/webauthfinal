@@ -52,7 +52,7 @@ body {
         420px 
         650px   /* section 3 */
         420px 
-        100px;
+        50px;
     /* footer*/
 
     grid-template-areas:
@@ -646,6 +646,13 @@ body {
         "logo  logo  logo"
         "nav   nav   nav"
         "header header header";
+}
+.pagefooter {
+    grid-template-columns: 1fr;
+    grid-template-rows: 75px;
+    grid-template-areas:
+    "footer"
+
 }
 
 .page-wrapper {
