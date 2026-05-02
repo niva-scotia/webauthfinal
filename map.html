@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Map</title>
+</head>
+<body>
+ 
+<!-- ── PAGE TOP ── -->
+<div class="page-top">
+ 
+    <div class="block block-logo" style="grid-area: logo">
+        <a href="index.html"><img src="imgs/Untitled.svg" alt="Logo" class="logo-img"/></a>
+    </div>
+ 
+    <nav class="nav-bar" style="grid-area: nav;">
+        <div class="nav-links">
+            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="#">Feature</a>
+            <a class="nav-link" href="map.html">Map</a>
+            <a class="nav-link" href="reviews.html">Reviews</a>
+            <a class="nav-link" href="imagegallery.html">Image Gallery</a>
+        </div>
+    </nav>
+ 
+    <div class="block block-header" style="grid-area: header">
+        <div class="header-rule"></div>
+        <span class="title" style="font-size:25px; opacity:.7;">The Map</span>
+        <span class="subtitle">Find your next climb!</span>
+    </div>
+ 
+</div>
+<div class="map-wrapper">
+    <aside class="map-sidebar">
+        <div class="sidebar-section">
+            <div class="sidebar-section-title">Legend</div>
+            <div class="legend-list">
+                <div class="legend-item indoor-boulder">
+                    <div class="legend-pin indoor-boulder"></div>
+                    <span class="legend-text">Indoor Boulder</span>
+                </div>
+                <div class="legend-item indoor-toprope">
+                    <div class="legend-pin indoor-toprope"></div>
+                    <span class="legend-text">Indoor Top Rope</span>
+                </div>
+                <div class="legend-item outdoor-boulder">
+                    <div class="legend-pin outdoor-boulder"></div>
+                    <span class="legend-text">Outdoor Boulder</span>
+                </div>
+                <div class="legend-item outdoor-toprope">
+                    <div class="legend-pin outdoor-toprope"></div>
+                    <span class="legend-text">Outdoor Top Rope</span>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="sidebar-section">
+            <div class="sidebar-section-title">Filter</div>
+            <div class="filter-list">
+                <div class="filter-toggle active">
+                    <div class="filter-dot indoor-boulder"></div>
+                    <span class="filter-label">Indoor Boulder</span>
+                    <div class="filter-check">✓</div>
+                </div>
+                <div class="filter-toggle active">
+                    <div class="filter-dot indoor-toprope"></div>
+                    <span class="filter-label">Indoor Top Rope</span>
+                    <div class="filter-check">✓</div>
+                </div>
+                <div class="filter-toggle active">
+                    <div class="filter-dot outdoor-boulder"></div>
+                    <span class="filter-label">Outdoor Boulder</span>
+                    <div class="filter-check">✓</div>
+                </div>
+                <div class="filter-toggle active">
+                    <div class="filter-dot outdoor-toprope"></div>
+                    <span class="filter-label">Outdoor Top Rope</span>
+                    <div class="filter-check">✓</div>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="sidebar-section">
+            <div class="sidebar-section-title">About This Map</div>
+            <p class="sidebar-blurb">
+                A hand-drawn guide to the best climbing spots — from
+                gym bouldering to outdoor multi-pitch. Each location
+                is tagged by discipline and difficulty range.
+            </p>
+        </div>
+ 
+    </aside>
+ 
+    <div class="map-area">
+        <img src="imgs/map.svg">
+    </div>
+ 
+    <div class="location-cards">
+        <div class="location-card indoor-boulder anim-fade-up">
+            <div class="location-card-top">
+                <div class="card-pin indoor-boulder"></div>
+                <span class="card-type">Indoor Boulder</span>
+            </div>
+            <div class="card-title">Method Climbing Gym</div>
+            <div class="card-rule"></div>
+            <p class="card-body">My home gym. Creative route setting, great community, and a wide range of V0–V10 problems. Best for technical and slab bouldering. Sets change frequently so there's always something new.</p>
+            <span class="card-tag">NYC · All levels</span>
+        </div>
+ 
+        <div class="location-card indoor-toprope anim-fade-up">
+            <div class="location-card-top">
+                <div class="card-pin indoor-toprope"></div>
+                <span class="card-type">Indoor Top Rope</span>
+            </div>
+            <div class="card-title">Central Rock Gym</div>
+            <div class="card-rule"></div>
+            <p class="card-body">Great For Top Rop</p>
+            <span class="card-tag">Boston · All Levels</span>
+        </div>
+ 
+        <div class="location-card outdoor-boulder anim-fade-up">
+            <div class="location-card-top">
+                <div class="card-pin outdoor-boulder"></div>
+                <span class="card-type">Outdoor Boulder</span>
+            </div>
+            <div class="card-title">Joshua Tree National Park</div>
+            <div class="card-rule"></div>
+            <p class="card-body">Wide variety of outdoor boulders</p>
+            <span class="card-tag">SoCal · All Levels</span>
+        </div>
+ 
+        <div class="location-card outdoor-toprope anim-fade-up">
+            <div class="location-card-top">
+                <div class="card-pin outdoor-toprope"></div>
+                <span class="card-type">Outdoor Top Rope</span>
+            </div>
+            <div class="card-title">Yosemite National Park</div>
+            <div class="card-rule"></div>
+            <p class="card-body">Amazing outdoor climbs</p>
+            <span class="card-tag">NorCal · All Levels</span>
+        </div>
+ 
+    </div>
+ 
+</div><!-- /map-wrapper -->
+ 
+</body>
+</html>
