@@ -13,6 +13,11 @@
     --block-content-bg: #d4c4b4;
     --block-intro-bg: #d0beac57;
 
+    --indoor-boulder:  #d45f3c;   /* accent orange */
+    --indoor-toprope:  #285366;   /* teal */
+    --outdoor-boulder: #7a5c2e;   /* warm brown */
+    --outdoor-toprope: #4a6741;   /* forest green */
+
     --font-mono: 'Courier New', Courier, monospace;
 }
 
@@ -1040,7 +1045,7 @@ body {
 .bio-img-block {
     background: var(--block-image-bg);
     height: 300px;
-    position: relative; 
+    position: relative;
     overflow: hidden;
     border-bottom: 3px solid var(--accent);
 }
@@ -1268,7 +1273,7 @@ body {
     align-self: flex-start;
 }
 
-/*Map Stuff*/ 
+/*Map Stuff*/
 
 .map-wrapper {
     display: grid;
@@ -1293,12 +1298,14 @@ body {
 
 .sidebar-section {
     padding: 24px 22px;
-    border-bottom: 1px solid rgba(255,255,255,.07);
+    border-bottom: 1px solid rgba(255, 255, 255, .07);
 }
 
 .sidebar-section-title {
-    font-size: 9px; letter-spacing: .22em;
-    text-transform: uppercase; color: #a09890;
+    font-size: 9px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: #a09890;
     margin-bottom: 16px;
 }
 
@@ -1316,148 +1323,88 @@ body {
     cursor: pointer;
     transition: opacity .2s;
 }
-.legend-item:hover { opacity: .7; }
+
+.legend-item:hover {
+    opacity: .7;
+}
 
 .legend-pin {
-    width: 22px; height: 22px;
+    width: 22px;
+    height: 22px;
     border-radius: 50% 50% 50% 0;
     transform: rotate(-45deg);
     flex-shrink: 0;
-    border: 2px solid rgba(255,255,255,.15);
+    border: 2px solid rgba(255, 255, 255, .15);
 }
 
-.legend-pin.indoor-boulder  { background: var(--indoor-boulder); }
-.legend-pin.indoor-toprope  { background: var(--indoor-toprope); }
-.legend-pin.outdoor-boulder { background: var(--outdoor-boulder); }
-.legend-pin.outdoor-toprope { background: var(--outdoor-toprope); }
+.legend-pin.indoor-boulder {
+    background: var(--indoor-boulder);
+}
+
+.legend-pin.indoor-toprope {
+    background: var(--indoor-toprope);
+}
+
+.legend-pin.outdoor-boulder {
+    background: var(--outdoor-boulder);
+}
+
+.legend-pin.outdoor-toprope {
+    background: var(--outdoor-toprope);
+}
 
 .legend-text {
-    font-size: 10px; letter-spacing: .1em;
+    font-size: 10px;
+    letter-spacing: .1em;
     text-transform: uppercase;
 }
 
-.legend-item.indoor-boulder  .legend-text { color: var(--indoor-boulder); }
-.legend-item.indoor-toprope  .legend-text { color: #5a9ab8; }
-.legend-item.outdoor-boulder .legend-text { color: #c49a4a; }
-.legend-item.outdoor-toprope .legend-text { color: #7aaa6f; }
-
-/* filter toggles */
-.filter-list {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+.legend-item.indoor-boulder .legend-text {
+    color: var(--indoor-boulder);
 }
 
-.filter-toggle {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-    padding: 8px 12px;
-    border: 1px solid rgba(255,255,255,.08);
-    transition: background .2s;
-    user-select: none;
-}
-.filter-toggle:hover { background: rgba(255,255,255,.05); }
-.filter-toggle.active { background: rgba(255,255,255,.08); }
-
-.filter-dot {
-    width: 10px; height: 10px;
-    border-radius: 50%;
-    flex-shrink: 0;
-}
-.filter-dot.indoor-boulder  { background: var(--indoor-boulder); }
-.filter-dot.indoor-toprope  { background: var(--indoor-toprope); }
-.filter-dot.outdoor-boulder { background: var(--outdoor-boulder); }
-.filter-dot.outdoor-toprope { background: var(--outdoor-toprope); }
-
-.filter-label {
-    font-size: 9px; letter-spacing: .12em;
-    text-transform: uppercase; color: #d0cbc4;
-    flex: 1;
+.legend-item.indoor-toprope .legend-text {
+    color: #5a9ab8;
 }
 
-.filter-check {
-    width: 14px; height: 14px;
-    border: 1px solid rgba(255,255,255,.2);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 10px; color: var(--accent);
+.legend-item.outdoor-boulder .legend-text {
+    color: #c49a4a;
 }
 
-/* sidebar blurb */
+.legend-item.outdoor-toprope .legend-text {
+    color: #7aaa6f;
+}
+
 .sidebar-blurb {
     font-size: 11px;
     color: #a09890;
     line-height: 1.8;
 }
 
-/* ── MAP AREA ── */
 .map-area {
     grid-area: map;
-    background: var(--block-image-bg);
+    background: var(--bg);
     position: relative;
     min-height: 600px;
     border-bottom: 3px solid var(--accent);
     overflow: hidden;
 }
 
-/* SVG placeholder — replace this entire div with your <svg> tag */
-.map-placeholder {
-    width: 100%; height: 100%;
-    min-height: 600px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    position: relative;
+.map-svg {
+    width: 100%;
+    height: auto;
 }
 
-/* decorative grid lines like graph paper — gives a map feel */
-.map-placeholder::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image:
-        linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
-    background-size: 40px 40px;
-}
-
-.map-placeholder-icon {
-    position: relative; z-index: 1;
-    display: flex; flex-direction: column;
-    align-items: center; gap: 14px;
-}
-
-.map-placeholder-icon svg { opacity: .25; }
-
-.map-placeholder-text {
-    font-size: 9px; letter-spacing: .22em;
-    text-transform: uppercase; color: rgba(255,255,255,.25);
-}
-
-.map-placeholder-sub {
-    font-size: 8px; letter-spacing: .14em;
-    text-transform: uppercase; color: rgba(255,255,255,.12);
-}
-
-/* compass rose in corner */
-.map-compass {
-    position: absolute;
-    top: 20px; right: 20px;
-    width: 56px; height: 56px;
-    opacity: .3;
-    z-index: 2;
-}
 
 /* map attribution strip */
 .map-attribution {
     position: absolute;
-    bottom: 10px; right: 12px;
-    font-size: 8px; letter-spacing: .1em;
+    bottom: 10px;
+    right: 12px;
+    font-size: 8px;
+    letter-spacing: .1em;
     text-transform: uppercase;
-    color: rgba(255,255,255,.2);
+    color: rgba(255, 255, 255, .2);
     z-index: 2;
 }
 
@@ -1478,8 +1425,14 @@ body {
     background: var(--block-content-bg);
     transition: background .2s;
 }
-.location-card:last-child { border-right: none; }
-.location-card:hover { background: #cdbba8; }
+
+.location-card:last-child {
+    border-right: none;
+}
+
+.location-card:hover {
+    background: #cdbba8;
+}
 
 .location-card-top {
     display: flex;
@@ -1488,48 +1441,93 @@ body {
 }
 
 .card-pin {
-    width: 18px; height: 18px;
+    width: 18px;
+    height: 18px;
     border-radius: 50% 50% 50% 0;
     transform: rotate(-45deg);
     flex-shrink: 0;
-    border: 2px solid rgba(255,255,255,.2);
+    border: 2px solid rgba(255, 255, 255, .2);
 }
-.card-pin.indoor-boulder  { background: var(--indoor-boulder); }
-.card-pin.indoor-toprope  { background: var(--indoor-toprope); }
-.card-pin.outdoor-boulder { background: var(--outdoor-boulder); }
-.card-pin.outdoor-toprope { background: var(--outdoor-toprope); }
+
+.card-pin.indoor-boulder {
+    background: var(--indoor-boulder);
+}
+
+.card-pin.indoor-toprope {
+    background: var(--indoor-toprope);
+}
+
+.card-pin.outdoor-boulder {
+    background: var(--outdoor-boulder);
+}
+
+.card-pin.outdoor-toprope {
+    background: var(--outdoor-toprope);
+}
 
 .card-type {
-    font-size: 8px; letter-spacing: .18em;
+    font-size: 8px;
+    letter-spacing: .18em;
     text-transform: uppercase;
 }
-.indoor-boulder  .card-type { color: var(--indoor-boulder); }
-.indoor-toprope  .card-type { color: var(--teal); }
-.outdoor-boulder .card-type { color: var(--outdoor-boulder); }
-.outdoor-toprope .card-type { color: var(--outdoor-toprope); }
 
-.card-title {
-    font-size: 16px; color: #3a3632;
-    letter-spacing: .03em; line-height: 1.2;
+.indoor-boulder .card-type {
+    color: var(--indoor-boulder);
+}
+
+.indoor-toprope .card-type {
+    color: var(--teal);
+}
+
+.outdoor-boulder .card-type {
+    color: var(--outdoor-boulder);
+}
+
+.outdoor-toprope .card-type {
+    color: var(--outdoor-toprope);
+}
+
+.mc-title {
+    font-size: 16px;
+    color: #3a3632;
+    letter-spacing: .03em;
+    line-height: 1.2;
 }
 
 .card-rule {
-    width: 24px; height: 2px;
-    border-radius: 1px; flex-shrink: 0;
+    width: 24px;
+    height: 2px;
+    border-radius: 1px;
+    flex-shrink: 0;
 }
-.indoor-boulder  .card-rule { background: var(--indoor-boulder); }
-.indoor-toprope  .card-rule { background: var(--teal); }
-.outdoor-boulder .card-rule { background: var(--outdoor-boulder); }
-.outdoor-toprope .card-rule { background: var(--outdoor-toprope); }
+
+.indoor-boulder .card-rule {
+    background: var(--indoor-boulder);
+}
+
+.indoor-toprope .card-rule {
+    background: var(--teal);
+}
+
+.outdoor-boulder .card-rule {
+    background: var(--outdoor-boulder);
+}
+
+.outdoor-toprope .card-rule {
+    background: var(--outdoor-toprope);
+}
 
 .card-body {
-    font-size: 11px; color: #5e503f;
-    line-height: 1.8; font-weight: 500;
+    font-size: 11px;
+    color: #5e503f;
+    line-height: 1.8;
+    font-weight: 500;
 }
 
 .card-tag {
     display: inline-flex;
-    font-size: 7px; letter-spacing: .14em;
+    font-size: 7px;
+    letter-spacing: .14em;
     text-transform: uppercase;
     padding: 3px 8px;
     color: #d0cbc4;
