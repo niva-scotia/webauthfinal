@@ -14,17 +14,13 @@
     --block-intro-bg: #d0beac57;
 
     --indoor-boulder: #d45f3c;
-    /* accent orange */
     --indoor-toprope: #285366;
-    /* teal */
     --outdoor-boulder: #7a5c2e;
-    /* warm brown */
     --outdoor-toprope: #4a6741;
-    /* forest green */
 
     --font-mono: 'Courier New', Courier, monospace;
 }
-
+/*general*/
 *,
 *::before,
 *::after {
@@ -44,6 +40,7 @@ body {
     font-size: 12px;
 }
 
+/* IMAGE GALLERY CSS */
 /* grid layout mechanics */
 .page {
     display: grid;
@@ -418,7 +415,7 @@ body {
     font-weight: bold;
 }
 
-/*  block fromatting  */
+/* general block fromatting -- grid  */
 .block {
     display: flex;
     flex-direction: column;
@@ -443,7 +440,7 @@ body {
     font-weight: bold;
 }
 
-/* universal nav bar */
+/* universal nav bar -- ALL PAGES */
 .nav-bar {
     background: var(--block-title-bg);
     color: #e8e3dc;
@@ -475,7 +472,7 @@ body {
     color: var(--accent);
 }
 
-/* logo */
+/* logo -- ALL PAGES*/
 .block-logo {
     background: var(--block-logo-bg);
 }
@@ -493,7 +490,7 @@ body {
     height: auto;
 }
 
-/* header */
+/* header -- ALL PAGES */
 .block-header {
     background: var(--block-header-bg);
     color: #e8e3dc;
@@ -508,7 +505,7 @@ body {
 }
 
 
-/* Image Gallery Page Formatting */
+/* Block formating for IMAGE GALLERY PAGE */
 
 .block-group {
     background: var(--block-group-bg);
@@ -586,7 +583,7 @@ body {
 
 }
 
-/* imgs */
+/* imgs for IMAGE GALLERY -- BUT trying to keep it consistent in all pages */
 .block-image {
     background: var(--block-image-bg);
     border-top: 4px solid var(--block-image-bg);
@@ -643,7 +640,7 @@ body {
     opacity: 95%;
 }
 
-/* content */
+/* content - IMG GALLERY */
 .block-content {
     background: var(--block-content-bg);
     color: #3a3632;
@@ -667,7 +664,7 @@ body {
 }
 
 
-/* page header grid */
+/* page header grid -- TO ADD TO ALL PAGES */
 .page-top {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -686,7 +683,7 @@ body {
 
 }
 
-/* Reviews Page Formatting */
+/* REVIEWS PAGE FORMATING  */
 
 .page-wrapper {
     max-width: 1200px;
@@ -703,7 +700,7 @@ body {
     align-items: start;
 }
 
-/* Main Column Stuff */
+/* Main Column Stuff -- REVIEWS PAGE  */
 .page-intro {
     border-bottom: 3px solid var(--accent);
     padding-bottom: 20px;
@@ -724,7 +721,7 @@ body {
     letter-spacing: .05em;
 }
 
-/* review page nav - diff from other pages */
+/* Review page specific nav -  */
 .page-nav {
     background: var(--block-group-bg);
     color: #d0cbc4;
@@ -806,7 +803,7 @@ body {
     margin-bottom: 10px;
 }
 
-/* meta byline stuff */
+/* meta byline stuff -- SPECIFC TO REVIEWS PAGE */
 .review-meta {
     display: flex;
     gap: 20px;
@@ -844,7 +841,7 @@ body {
     color: #a09890;
 }
 
-/* rating  */
+/* rating  -- NEED TO FIX REPLACE WITH ICONS -- PLACE HOLDER*/
 .star-rating {
     display: flex;
     align-items: center;
@@ -908,7 +905,7 @@ body {
     border-color: var(--accent);
 }
 
-/*  Side bar stuff */
+/*  Side bar stuff -- NEED TO FIX, MAKE BIGGER?? */
 .sidebar {
     position: sticky;
     top: 20px;
@@ -981,7 +978,7 @@ body {
     letter-spacing: 2px;
 }
 
-/* tag cloud / category filter */
+/* tag cloud / category filter -- MIGHT REMOVE */
 .sidebar-tags {
     display: flex;
     flex-wrap: wrap;
@@ -1006,14 +1003,14 @@ body {
 }
 
 
-/*about*/
+/*ABOUT PAGE FORMATTING*/
 .about-wrapper {
     max-width: 1100px;
     margin: 0 auto;
     padding: 60px 40px 100px;
 }
 
-/* ── BIO SECTION ── */
+/* bio cards */
 .bio-heading {
     font-size: 9px;
     letter-spacing: .22em;
@@ -1138,7 +1135,7 @@ body {
     color: #a09890;
 }
 
-/* ── TIMELINE SECTION ── */
+/* zig zaggy timeline -- replace holds with IMAGES */
 .timeline-section {
     position: relative;
 }
@@ -1161,13 +1158,11 @@ body {
     background: var(--border);
 }
 
-/* ── THE CLIMB WALL ── */
 .climb-wall {
     position: relative;
     width: 100%;
 }
 
-/* SVG zigzag rope sits behind everything */
 .climb-rope {
     position: absolute;
     top: 0;
@@ -1178,7 +1173,7 @@ body {
     z-index: 0;
 }
 
-/* ── CLIMB EVENT ── */
+/* timeline cards */
 .climb-event {
     position: relative;
     display: flex;
@@ -1195,10 +1190,7 @@ body {
     justify-content: flex-end;
 }
 
-/* ── HOLD ── */
-
-
-/* zigzag: left holds sit 10% in, right holds sit 10% from right edge */
+/* FOR THE ZIGZAGS  */
 .climb-event.left .hold-col {
     margin-left: 10%;
 }
@@ -1277,7 +1269,8 @@ body {
     align-self: flex-start;
 }
 
-/*Map Stuff*/
+
+/*MAP PAGE FORMATTING*/
 
 .map-area {
     grid-area: map;
@@ -1601,19 +1594,34 @@ a:hover .outb-title {
 }
 
 path.indoor-toprope.hovered {
-    stroke-width: 13 !important;
+    stroke-width: 13;
     filter: brightness(1.3);
+    filter: drop-shadow(0 0 6px #5f90a5d3)
+            drop-shadow(0 0 18px #5f90a5d3)
+            drop-shadow(0 0 35px #5f90a5d3);
+    stroke-opacity: 1;
+    cursor: pointer;
 }
 
 
 path.outdoor-boulder.hovered {
-    stroke-width: 13 !important;
+    stroke-width: 13;
     filter: brightness(1.3);
+    filter: drop-shadow(0 0 6px #9d8054)
+            drop-shadow(0 0 18px #9d8054)
+            drop-shadow(0 0 35px #9d8054);
+    stroke-opacity: 1;
+    cursor: pointer;
 }
 
 path.outdoor-toprope.hovered {
-    stroke-width: 13 !important;
+    stroke-width: 13;
     filter: brightness(1.3);
+    filter: drop-shadow(0 0 6px #87ab7ca4)
+            drop-shadow(0 0 18px #87ab7ca4)
+            drop-shadow(0 0 35px #87ab7ca4);
+    stroke-opacity: 1;
+    cursor: pointer;
 }
 
 text.indoor-boulder.hovered,
@@ -1645,7 +1653,45 @@ text {
     background: #b8d0b4;
 }
 
-path.active,
-text.active {
+path.indoor-toprope.active {
+    stroke-width: 13;
     filter: brightness(1.3);
+    filter: drop-shadow(0 0 6px #5f90a5d3)
+            drop-shadow(0 0 18px #5f90a5d3)
+            drop-shadow(0 0 35px #5f90a5d3);
+    stroke-opacity: 1;
+    cursor: pointer;
+}
+
+path.indoor-boulder.active {
+    filter: drop-shadow(0 0 6px #e2a997)
+    drop-shadow(0 0 18px #e2a997)
+    drop-shadow(0 0 35px #e2a997);
+    stroke-opacity: 1;
+    cursor: pointer
+}
+
+path.outdoor-boulder.active {
+    stroke-width: 13;
+    filter: brightness(1.3);
+    filter: drop-shadow(0 0 6px #9d8054)
+            drop-shadow(0 0 18px #9d8054)
+            drop-shadow(0 0 35px #9d8054);
+    stroke-opacity: 1;
+    cursor: pointer;
+}
+
+path.outdoor-toprope.active {
+    stroke-width: 13;
+    filter: brightness(1.3);
+    filter: drop-shadow(0 0 6px #87ab7ca4)
+            drop-shadow(0 0 18px #87ab7ca4)
+            drop-shadow(0 0 35px #87ab7ca4);
+    stroke-opacity: 1;
+    cursor: pointer;
+}
+text.active {
+    filter: brightness(1.6) drop-shadow(0 0 4px #cde7f4);
+    font-size: 26px;
+  
 }
