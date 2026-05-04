@@ -41,18 +41,18 @@
                         <div class="legend-pin indoor-boulder"></div>
                         <span class="legend-text">Indoor Boulder</span>
                     </a>
-                    <div class="legend-item indoor-toprope">
+                    <a href="#indoor-toprope" class="legend-item indoor-toprope">
                         <div class="legend-pin indoor-toprope"></div>
                         <span class="legend-text">Indoor Top Rope</span>
-                    </div>
-                    <div class="legend-item outdoor-boulder">
+                    </a>
+                    <a href="#outdoor-boulder" class="legend-item outdoor-boulder">
                         <div class="legend-pin outdoor-boulder"></div>
                         <span class="legend-text">Outdoor Boulder</span>
-                    </div>
-                    <div class="legend-item outdoor-toprope">
+                    </a>
+                    <a href="#outdoor-toprope" class="legend-item outdoor-toprope">
                         <div class="legend-pin outdoor-toprope"></div>
                         <span class="legend-text">Outdoor Top Rope</span>
-                    </div>
+                    </a>
                 </div>
             </div>
 
@@ -2897,25 +2897,26 @@
                 <span class="card-tag">Boston · All Levels</span>
             </div>
 
-            <div class="location-card outdoor-boulder">
+            <div id="outdoor-boulder" class="location-card outdoor-boulder">
                 <div class="location-card-top">
                     <div class="card-pin outdoor-boulder"></div>
                     <span class="card-type">Outdoor Boulder</span>
                 </div>
                 <div class="mc-title">Joshua Tree National Park</div>
                 <div class="card-rule"></div>
-                <p class="card-body"></p>
+                <p class="card-body">This beautiful park in southern california is known for its iconic Joshua Trees and rock formations. These rocks are perfect for some outdoor bouldering, and theres a wide range of boulders to start off on if it's your first time bouldering.
+                    I particulary like that you can actually rent crash pads, so this is a perfect spot for first time outdoor boulderers who may not have the proper equipment or are unsure of whether they want to invest in that just yet. </p>
                 <span class="card-tag">SoCal · All Levels</span>
             </div>
 
-            <div class="location-card outdoor-toprope">
+            <div id="outdoor-toprope" class="location-card outdoor-toprope">
                 <div class="location-card-top">
                     <div class="card-pin outdoor-toprope"></div>
                     <span class="card-type">Outdoor Top Rope</span>
                 </div>
                 <div class="mc-title">Yosemite National Park</div>
                 <div class="card-rule"></div>
-                <p class="card-body">Amazing outdoor climbs</p>
+                <p class="card-body">Known for it's amazing views and iconic climbs. Many know this national park as the home to the granite giant El Capitan, the site of some of climbing's greatest achivements, but there are plenty of top rope sites more inviting to beginners. If you're not ready for top rope yet, the hikes here are challenging and many include some scrambles which give off the feel of rock climbing without being roped in. Though, Yosemite is often full of expert climbers who are usually open to guiding beginners.</p>
                 <span class="card-tag">NorCal · All Levels</span>
             </div>
 
@@ -2930,6 +2931,21 @@
             const mapItem = document.querySelector(`path.${category}, text.${category}`);
             const cards = document.querySelectorAll(`.location-card.${category}`);
             const svgElements = document.querySelectorAll(`path.${category}, text.${category}`);
+
+            legendItem.addEventListener('click', () => {
+
+                // remove previous selection
+                document.querySelectorAll('.active').forEach(el => {
+                    el.classList.remove('active');
+                });
+
+                // add selection to this category
+                legendItem.classList.add('active');
+                cards.forEach(el => el.classList.add('active'));
+                svgElements.forEach(el => el.classList.add('active'));
+                });
+
+           
 
             legendItem.addEventListener('mouseenter', () => {
                 cards.forEach(el => el.classList.add('hovered'));

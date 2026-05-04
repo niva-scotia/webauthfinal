@@ -1628,3 +1628,24 @@ path,
 text {
     transition: filter 0.2s, stroke-width 0.2s;
 }
+
+.location-card.indoor-boulder.active {
+    background: #dac0a0;
+}
+
+.location-card.indoor-toprope.active {
+    background: #b8cdd6;
+}
+
+.location-card.outdoor-boulder.active {
+    background: #d4c09a;
+}
+
+.location-card.outdoor-toprope.active {
+    background: #b8d0b4;
+}
+
+path.active,
+text.active {
+    filter: brightness(1.3);
+}
