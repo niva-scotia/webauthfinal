@@ -13,10 +13,14 @@
     --block-content-bg: #d4c4b4;
     --block-intro-bg: #d0beac57;
 
-    --indoor-boulder:  #d45f3c;   /* accent orange */
-    --indoor-toprope:  #285366;   /* teal */
-    --outdoor-boulder: #7a5c2e;   /* warm brown */
-    --outdoor-toprope: #4a6741;   /* forest green */
+    --indoor-boulder: #d45f3c;
+    /* accent orange */
+    --indoor-toprope: #285366;
+    /* teal */
+    --outdoor-boulder: #7a5c2e;
+    /* warm brown */
+    --outdoor-toprope: #4a6741;
+    /* forest green */
 
     --font-mono: 'Courier New', Courier, monospace;
 }
@@ -1275,6 +1279,20 @@ body {
 
 /*Map Stuff*/
 
+.map-area {
+    grid-area: map;
+    background: var(--bg);
+    position: relative;
+    min-height: 600px;
+    border-bottom: 3px solid var(--accent);
+    overflow: hidden;
+}
+
+.map-svg {
+    width: 100%;
+    height: auto;
+}
+
 .map-wrapper {
     display: grid;
     grid-template-columns: 280px 1fr;
@@ -1294,6 +1312,10 @@ body {
     flex-direction: column;
     gap: 0;
     overflow-y: auto;
+
+    position: sticky;
+    top: 0;
+    height: 100vh;
 }
 
 .sidebar-section {
@@ -1336,7 +1358,9 @@ body {
     flex-shrink: 0;
     border: 2px solid rgba(255, 255, 255, .15);
 }
-
+a.legend-item {
+    text-decoration: none;
+}
 .legend-pin.indoor-boulder {
     background: var(--indoor-boulder);
 }
@@ -1381,33 +1405,6 @@ body {
     line-height: 1.8;
 }
 
-.map-area {
-    grid-area: map;
-    background: var(--bg);
-    position: relative;
-    min-height: 600px;
-    border-bottom: 3px solid var(--accent);
-    overflow: hidden;
-}
-
-.map-svg {
-    width: 100%;
-    height: auto;
-}
-
-
-/* map attribution strip */
-.map-attribution {
-    position: absolute;
-    bottom: 10px;
-    right: 12px;
-    font-size: 8px;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, .2);
-    z-index: 2;
-}
-
 /* ── LOCATION CARDS ── */
 .location-cards {
     grid-area: location-cards;
@@ -1430,8 +1427,20 @@ body {
     border-right: none;
 }
 
-.location-card:hover {
-    background: #cdbba8;
+.location-card.indoor-boulder.hovered {
+    background: #dac0a0;
+}
+
+.location-card.indoor-toprope.hovered {
+    background: #b8cdd6;
+}
+
+.location-card.outdoor-boulder.hovered {
+    background: #d4c09a;
+}
+
+.location-card.outdoor-toprope.hovered {
+    background: #b8d0b4;
 }
 
 .location-card-top {
@@ -1534,4 +1543,88 @@ body {
     background: var(--block-group-bg);
     align-self: flex-start;
     margin-top: auto;
+}
+
+path.indoor-boulder.hovered {
+    filter: drop-shadow(0 0 6px #e2a997)
+    drop-shadow(0 0 18px #e2a997)
+    drop-shadow(0 0 35px #e2a997);
+    stroke-opacity: 1;
+    cursor: pointer
+}
+a:hover .indoor-boulder {
+    filter: drop-shadow(0 0 6px #e2a997)
+            drop-shadow(0 0 18px #e2a997)
+            drop-shadow(0 0 35px #e2a997);
+    stroke-opacity: 1;
+    cursor: pointer;
+}
+a:hover .inb-title {
+    filter: brightness(1.6) drop-shadow(0 0 4px #cde7f4);
+    font-size: 26px
+}
+
+a:hover .indoor-toprope {
+    filter: drop-shadow(0 0 6px #5f90a5d3)
+            drop-shadow(0 0 18px #5f90a5d3)
+            drop-shadow(0 0 35px #5f90a5d3);
+    stroke-opacity: 1;
+    cursor: pointer;
+}
+a:hover .int-title {
+    filter: brightness(1.6) drop-shadow(0 0 4px #5f90a5d3);
+    font-size: 26px
+}
+
+a:hover .outdoor-toprope {
+    filter: drop-shadow(0 0 6px #87ab7ca4)
+            drop-shadow(0 0 18px #87ab7ca4)
+            drop-shadow(0 0 35px #87ab7ca4);
+    stroke-opacity: 1;
+    cursor: pointer;
+}
+a:hover .outt-title {
+    filter: brightness(1.6) drop-shadow(0 0 4px #87ab7ca4);
+    font-size: 26px
+}
+
+a:hover .outdoor-boulder {
+    filter: drop-shadow(0 0 6px #9d8054)
+            drop-shadow(0 0 18px #9d8054)
+            drop-shadow(0 0 35px #9d8054);
+    stroke-opacity: 1;
+    cursor: pointer;
+}
+a:hover .outb-title {
+    filter: brightness(1.6) drop-shadow(0 0 4px #9d8054);
+    font-size: 26px
+}
+
+path.indoor-toprope.hovered {
+    stroke-width: 13 !important;
+    filter: brightness(1.3);
+}
+
+
+path.outdoor-boulder.hovered {
+    stroke-width: 13 !important;
+    filter: brightness(1.3);
+}
+
+path.outdoor-toprope.hovered {
+    stroke-width: 13 !important;
+    filter: brightness(1.3);
+}
+
+text.indoor-boulder.hovered,
+text.indoor-toprope.hovered,
+text.outdoor-boulder.hovered,
+text.outdoor-toprope.hovered {
+    filter: brightness(1.6) drop-shadow(0 0 4px #cde7f4);
+    font-size: 26px;
+}
+
+path,
+text {
+    transition: filter 0.2s, stroke-width 0.2s;
 }
