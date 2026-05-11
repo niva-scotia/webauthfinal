@@ -76,6 +76,17 @@ body {
     margin: 0 auto;
 }
 
+a {
+
+    color: var(--accent);  
+    text-decoration: none;      
+}
+
+a:hover{
+    color: var(--block-image-bg);  
+}
+
+
 .gallery-groups {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -924,15 +935,16 @@ body {
 }
 
 .back-to-top {
-    padding: 15px;
+    padding: 10px;
     display: inline-block;
-    font-size: 10px;
+    font-size: 12px;
     letter-spacing: .18em;
     text-transform: uppercase;
-    color: #b86009;
+    color: #3d1f01;
     text-decoration: none;
     border-bottom: 1px solid var(--border);
     padding-bottom: 10px;
+    margin-bottom: 15px;
     transition: color .15s, border-color .15s;
 }
 
