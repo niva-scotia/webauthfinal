@@ -86,7 +86,6 @@ a:hover{
     color: var(--block-image-bg);  
 }
 
-
 .gallery-groups {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
