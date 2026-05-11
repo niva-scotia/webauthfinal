@@ -616,7 +616,6 @@ body {
     max-width: 100%;
 }
 
-/* imgs for IMAGE GALLERY -- BUT trying to keep it consistent in all pages */
 .block-image {
     background: var(--block-image-bg);
     border-top: 4px solid var(--block-image-bg);
@@ -925,19 +924,16 @@ body {
 }
 
 .back-to-top {
+    padding: 15px;
     display: inline-block;
     font-size: 10px;
     letter-spacing: .18em;
     text-transform: uppercase;
-    color: #a09890;
+    color: #b86009;
     text-decoration: none;
     border-bottom: 1px solid var(--border);
-    padding-bottom: 2px;
+    padding-bottom: 10px;
     transition: color .15s, border-color .15s;
-}
-
-.back-to-top:visited {
-    color: #a09890;
 }
 
 .back-to-top:hover {
@@ -945,7 +941,6 @@ body {
     border-color: var(--accent);
 }
 
-/*  Side bar stuff -- NEED TO FIX, MAKE BIGGER?? */
 .sidebar {
     position: sticky;
     top: 20px;
@@ -1047,14 +1042,12 @@ body {
 }
 
 
-/*ABOUT PAGE FORMATTING*/
 .about-wrapper {
     max-width: 1100px;
     margin: 0 auto;
     padding: 60px 40px 100px;
 }
 
-/* bio cards */
 .bio-heading {
     font-size: 12px;
     letter-spacing: .22em;
@@ -1237,7 +1230,6 @@ body {
     justify-content: flex-end;
 }
 
-/* FOR THE ZIGZAGS  */
 .climb-event.left .hold-col {
     margin-left: 10%;
 }
@@ -1790,12 +1782,6 @@ text.active {
     }
 }
 
-
-/* ═══════════════════════════════════════════
-   HOME PAGE
-   ═══════════════════════════════════════════ */
-
-/* ── Lead Section ── */
 .home-lead {
     display: flex;
     flex-direction: column;
@@ -1804,7 +1790,7 @@ text.active {
 .lead-banner {
     position: relative;
     width: 100%;
-    height: 520px;
+    height: 420px;
     overflow: hidden;
     background: var(--block-image-bg);
 }
@@ -1845,9 +1831,8 @@ text.active {
     text-shadow: 0 1px 8px rgba(0, 0, 0, .4);
 }
 
-/* ── Intro ── */
 .lead-intro {
-    max-width: 1200px;
+    max-width: 1400px;
     width: 100%;
     margin: 0 auto;
     padding: 50px 48px 56px;
@@ -1863,9 +1848,8 @@ text.active {
     max-width: 100%;
 }
 
-/* ── Showcase Section ── */
 .home-showcase {
-    max-width: 1200px;
+    max-width: 1400px;
     width: 100%;
     margin: 0 auto;
     padding: 56px 48px 70px;
@@ -1896,7 +1880,7 @@ text.active {
     gap: 24px;
 }
 
-/* ── Showcase Cards ── */
+
 .showcase-card {
     display: flex;
     flex-direction: column;
@@ -1915,7 +1899,7 @@ text.active {
     position: relative;
     height: 240px;
     overflow: hidden;
-    background: var(--block-image-bg);
+    background: var(--block-intro-bg);
     border-bottom: 3px solid var(--accent);
 }
 
@@ -2020,40 +2004,13 @@ text.active {
 
 .feature-hero .hero-slot:last-child { border-right: none; }
 
-/* placeholder style for all image slots */
-.img-placeholder {
-    width: 100%;
-    height: 100%;
-    min-height: 200px;
-    background: linear-gradient(135deg, #2f2b24 0%, #22333b 100%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    color: #5e503f;
-    font-family: var(--font-mono);
-    font-size: 10px;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-    border: 1px dashed #3a3530;
-}
-
-.img-placeholder .ph-num {
-    font-size: 28px;
-    color: #3a3530;
-    font-weight: bold;
-    line-height: 1;
-}
-
 /* ── Feature body wrapper ── */
 .feature-wrapper {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 0 60px;
+    padding: 0 0 0px;
 }
 
-/* ── Essay title block ── */
 .feature-title-block {
     background: var(--block-header-bg);
     color: #e8e3dc;
@@ -2062,10 +2019,10 @@ text.active {
 }
 
 .feature-kicker {
-    font-size: 9px;
+    font-size: 15px;
     letter-spacing: .28em;
     text-transform: uppercase;
-    color: var(--accent);
+    color: #d1b1a7;
     font-family: var(--font-mono);
     margin-bottom: 14px;
 }
@@ -2080,19 +2037,6 @@ text.active {
     margin-bottom: 6px;
 }
 
-.feature-title span {
-    color: var(--accent);
-}
-
-.feature-subtitle {
-    font-size: 15px;
-    color: #a09890;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    margin-top: 14px;
-    padding-top: 14px;
-    border-top: 1px solid rgba(255,255,255,.1);
-}
 
 .feature-intro {
     padding: 36px 64px 28px;
@@ -2101,21 +2045,10 @@ text.active {
 }
 
 .feature-intro p {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 2;
     color: #285366;
-    max-width: 900px;
-    font-family: var(--font-mono);
-}
-
-.feature-intro p::first-letter {
-    font-size: 52px;
-    font-weight: bold;
-    float: left;
-    line-height: .8;
-    margin-right: 10px;
-    margin-top: 6px;
-    color: var(--accent);
+    max-width: 1200px;
     font-family: var(--font-mono);
 }
 
@@ -2138,7 +2071,7 @@ text.active {
     background: var(--block-content-bg);
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 10px;
     justify-content: center;
 }
 
@@ -2146,20 +2079,20 @@ text.active {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 4px;
+    margin-bottom: 20px;
 }
 
 .section-num {
     font-size: 36px;
     font-weight: bold;
     color: var(--accent);
-    opacity: .3;
+    opacity: .6;
     line-height: 1;
     font-family: var(--font-mono);
 }
 
 .section-tag {
-    font-size: 9px;
+    font-size: 12px;
     letter-spacing: .24em;
     text-transform: uppercase;
     color: var(--accent);
@@ -2169,7 +2102,7 @@ text.active {
 }
 
 .section-heading {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
     letter-spacing: .06em;
     text-transform: uppercase;
@@ -2178,15 +2111,9 @@ text.active {
     margin-bottom: 6px;
 }
 
-.header-rule {
-    width: 40px;
-    height: 2px;
-    background: var(--accent);
-    border-radius: 1px;
-}
 
 .section-text p {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.95;
     color: #5e503f;
     font-family: var(--font-mono);
@@ -2197,12 +2124,11 @@ text.active {
     border-top: 1px dashed var(--border);
 }
 
-/* pull quote inside a section */
 .pull-quote {
     border-left: 3px solid var(--accent);
     padding: 10px 16px;
     background: rgba(212, 95, 60, .07);
-    font-size: 14px;
+    font-size: 16px;
     font-style: italic;
     line-height: 1.7;
     color: #3a3632;
@@ -2239,17 +2165,16 @@ text.active {
     bottom: 0; left: 0; right: 0;
     background: rgba(34,31,27,.78);
     color: #e8e3dc;
-    font-size: 9px;
+    font-size: 10px;
     letter-spacing: .12em;
     text-transform: uppercase;
     padding: 6px 10px;
     font-family: var(--font-mono);
 }
 
-/* ── Closing block ── */
+
 .feature-closing {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     border-bottom: 4px solid var(--accent);
     min-height: 320px;
 }
@@ -2265,7 +2190,7 @@ text.active {
 }
 
 .closing-text .close-label {
-    font-size: 9px;
+    font-size: 25px;
     letter-spacing: .28em;
     text-transform: uppercase;
     color: var(--accent);
@@ -2273,7 +2198,7 @@ text.active {
 }
 
 .closing-text p {
-    font-size: 13px;
+    font-size: 16px;
     line-height: 2;
     color: #a09890;
     font-family: var(--font-mono);
@@ -2284,24 +2209,3 @@ text.active {
     font-style: normal;
     font-weight: bold;
 }
-
-.closing-img {
-    overflow: hidden;
-    background: var(--block-image-bg);
-    position: relative;
-}
-
-.closing-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    opacity: 70%;
-}
-
-.feature-footer a {
-    color: var(--accent);
-    text-decoration: none;
-}
-
-.feature-footer a:hover { text-decoration: underline; }
