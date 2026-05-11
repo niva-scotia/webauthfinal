@@ -55,11 +55,11 @@ body {
         /* header */
         300px
         /* groups nav */
-        420px 650px
+        minmax(420px, 28vw) minmax(650px, 40vw)
         /* section 1 */
-        420px 650px
+        minmax(420px, 28vw) minmax(650px, 40vw)
         /* section 2 */
-        420px 650px
+        minmax(420px, 28vw) minmax(650px, 40vw)
         /* section 3 */
         420px 50px;
     /* footer*/
